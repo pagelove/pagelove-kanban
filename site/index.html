@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Board</title>
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body class="home">
+
+<div class="home-wrap">
+  <h1>Board</h1>
+
+  <h2>Your boards</h2>
+  <ul class="board-grid" id="boards"></ul>
+
+  <p class="empty" id="empty-note">No boards yet.</p>
+
+  <p style="margin-top:16px">
+    <button class="btn-primary" type="button" id="new-board-btn">Create board</button>
+  </p>
+
+  <section id="archived-section" hidden>
+    <h2>Archived</h2>
+    <ul class="board-grid" id="archived-boards"></ul>
+  </section>
+</div>
+
+<dialog id="new-board-dialog">
+  <form method="dialog">
+    <h3>Create board</h3>
+    <input type="text" name="name" placeholder="Board title" autocomplete="off" required>
+    <div class="swatches">
+      <input type="radio" name="bg" id="bg-ocean" value="ocean" checked><label for="bg-ocean" style="background:#0079bf"></label>
+      <input type="radio" name="bg" id="bg-forest" value="forest"><label for="bg-forest" style="background:#519839"></label>
+      <input type="radio" name="bg" id="bg-berry" value="berry"><label for="bg-berry" style="background:#b04632"></label>
+      <input type="radio" name="bg" id="bg-dusk" value="dusk"><label for="bg-dusk" style="background:#89609e"></label>
+      <input type="radio" name="bg" id="bg-sand" value="sand"><label for="bg-sand" style="background:#d29034"></label>
+      <input type="radio" name="bg" id="bg-slate" value="slate"><label for="bg-slate" style="background:#4d5b6b"></label>
+      <input type="radio" name="bg" id="bg-teal" value="teal"><label for="bg-teal" style="background:#00857a"></label>
+    </div>
+    <div class="dialog-actions">
+      <button class="btn-ghost" type="submit" value="cancel" formnovalidate>Cancel</button>
+      <button class="btn-primary" type="submit" value="create">Create</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="/app.js"></script>
+</body>
+</html>
